@@ -1,0 +1,21 @@
+
+//let fs = require('fs');
+//const data = fs.readFileSync('input.txt', 'utf8');
+
+let data = "5 11 4 18 9 5";
+const tokens = data.split(/\s+/).filter(s => s.length > 0).map(Number);
+const n = tokens[0];
+const arr = tokens.slice(1, 1 + n);
+
+console.log(n);
+console.log(tokens);
+console.log(arr);
+
+let maxElement = arr[0] ;  
+
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > maxElement) {
+        maxElement = arr[i];
+    }   
+}
+console.log(`${maxElement}`);
